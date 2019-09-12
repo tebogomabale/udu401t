@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateStudentTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateStudentLabel_studentId}" for="studentId" />
+                    <h:inputText id="studentId" value="#{studentController.selected.studentId}" title="#{bundle.CreateStudentTitle_studentId}" required="true" requiredMessage="#{bundle.CreateStudentRequiredMessage_studentId}"/>
+                    <h:outputLabel value="#{bundle.CreateStudentLabel_studentName}" for="studentName" />
+                    <h:inputText id="studentName" value="#{studentController.selected.studentName}" title="#{bundle.CreateStudentTitle_studentName}" />
+                    <h:outputLabel value="#{bundle.CreateStudentLabel_idnumber}" for="idnumber" />
+                    <h:inputText id="idnumber" value="#{studentController.selected.idnumber}" title="#{bundle.CreateStudentTitle_idnumber}" required="true" requiredMessage="#{bundle.CreateStudentRequiredMessage_idnumber}"/>
+                    <h:outputLabel value="#{bundle.CreateStudentLabel_firstname}" for="firstname" />
+                    <h:inputText id="firstname" value="#{studentController.selected.firstname}" title="#{bundle.CreateStudentTitle_firstname}" />
+                    <h:outputLabel value="#{bundle.CreateStudentLabel_lastname}" for="lastname" />
+                    <h:inputText id="lastname" value="#{studentController.selected.lastname}" title="#{bundle.CreateStudentTitle_lastname}" />
+                    <h:outputLabel value="#{bundle.CreateStudentLabel_email}" for="email" />
+                    <h:inputText id="email" value="#{studentController.selected.email}" title="#{bundle.CreateStudentTitle_email}" />
+                    <h:outputLabel value="#{bundle.CreateStudentLabel_modulename}" for="modulename" />
+                    <h:inputText id="modulename" value="#{studentController.selected.modulename}" title="#{bundle.CreateStudentTitle_modulename}" />
+                    <h:outputLabel value="#{bundle.CreateStudentLabel_institutionId}" for="institutionId" />
+                    <h:selectOneMenu id="institutionId" value="#{studentController.selected.institutionId}" title="#{bundle.CreateStudentTitle_institutionId}" required="true" requiredMessage="#{bundle.CreateStudentRequiredMessage_institutionId}">
+                        <f:selectItems value="#{institutionController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{studentController.create}" value="#{bundle.CreateStudentSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{studentController.prepareList}" value="#{bundle.CreateStudentShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateStudentIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
