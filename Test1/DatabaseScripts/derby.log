@@ -1,0 +1,19 @@
+Fri Oct 04 21:12:53 CAT 2019 : Apache Derby Network Server - 10.13.1.1 - (Unversioned directory) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+Fri Oct 04 21:12:53 CAT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (Unversioned directory): instance a816c00e-016d-9830-6b5d-ffffe2314550 
+on database directory C:\data\TUT\2019\Test1\DatabaseScripts\sample with class loader sun.misc.Launcher$AppClassLoader@266474c2 
+Loaded from file:/C:/data/glassfish-5.0/glassfish5/javadb/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_152-b16
+user.dir=C:\data\glassfish-5.0\glassfish5\javadb
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\data\TUT\2019\Test1\DatabaseScripts
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Mon Oct 07 08:48:23 CAT 2019: Shutting down Derby engine
+----------------------------------------------------------------
+Mon Oct 07 08:48:23 CAT 2019:
+Shutting down instance a816c00e-016d-9830-6b5d-ffffe2314550 on database directory C:\data\TUT\2019\Test1\DatabaseScripts\sample with class loader sun.misc.Launcher$AppClassLoader@266474c2 
